@@ -10,11 +10,15 @@ pool:
   vmImage: windows-2019
 
 steps:
+
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'ToAzure'
     subscriptionId: '817e3204-6937-4028-b5cb-f197ac0bd9ee'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'Bruce'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.sourcesDirectory)/webapp/armdeploy.json'
