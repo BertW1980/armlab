@@ -17,6 +17,6 @@ steps:
     subscriptionId: '817e3204-6937-4028-b5cb-f197ac0bd9ee'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: '$(Build.sourceDirectory)/webapp/armdeploy.json'
-    csmParametersFile: '$(Build.sourceDirectory)/webapp/armparam.json'
+    csmFile: '$(Build.sourcesDirectory)/webapp/armdeploy.json'
+    csmParametersFile: '$(Build.sourcesDirectory)/webapp/armparam.json'
     deploymentMode: 'Incremental'
